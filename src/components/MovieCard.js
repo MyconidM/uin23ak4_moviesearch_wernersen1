@@ -1,10 +1,13 @@
-export default function MovieCard({img, title, ingress}) {
+import React from "react"
+
+export default function MovieCard(props) {
     return (
-        <article className="article-card">
-            <img src={img} alt={title} />
-            <h3>{title}</h3>
-            <p>{ingress}</p>
-            <a href="#">Les mer</a>
-        </article>
+        <>
+            {props.movies?.map((movie, index) => 
+                <div className="d-flex justify-content-start m-3">
+                    <img src={movie.Poster} alt={movie.type}></img>
+                </div>    
+            )}
+        </>
     )
 }
