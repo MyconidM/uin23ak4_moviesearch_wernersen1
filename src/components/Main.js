@@ -7,7 +7,7 @@ import Search from "./Search"
 export default function Main() {
 
     const [movies, setMovies] = useState([])
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('James Bond')
     //const [filter, setFilter] = useState("All")
     //const [resultat, setResultat] = useState([])
     //const navCat = [...new Set(movies.map((e) => e.source.Title))]
