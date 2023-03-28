@@ -1,21 +1,9 @@
-import { useState } from "react";
-import Heading from "./Heading";
-import Search from "./Search";
+import Main from './Main'
 
-
-export default function Layout({children}){
-    const [search, setSearch] = useState('')
+export default function Layout(){
     return(
         <div className="container">
-            <header>
-                <div className="row d-flex align-items-center mt-4 mb-4">
-                    <Heading  heading="Film søk"/>
-                    <Search search={search} setSearch={setSearch}/>
-                </div>
-            </header>
-            <main>
-                {children}
-            </main>
+            <Main />
         </div>
     )
 }
