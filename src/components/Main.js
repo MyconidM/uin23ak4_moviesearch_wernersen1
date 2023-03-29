@@ -56,7 +56,7 @@ export default function Main({child}) {
                 </div>
             </header>
             <main>
-                <article className='container text-center'>
+                <article className='d-flex container'>
                     <div className='row'>
                         <MovieCard movies={movieInfo}/>
                     </div>

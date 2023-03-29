@@ -1,11 +1,10 @@
-import { useParams } from "react-router-dom";
 
 export default function ReadMore({props}) {
     const PlaceholderImg = 'https://via.placeholder.com/300x450?text=No+Poster+Available';
     return (
         <>
             {props.movies?.map((movie,) => 
-                <div className="align-text-center">
+                <div className="">
                     <img className="rounded-top" src={movie.Poster === 'N/A' ? PlaceholderImg : movie.Poster} alt={movie.type}></img>
                     <div className="text-box rounded-bottom">
                         <h2>{movie?.Title}</h2>

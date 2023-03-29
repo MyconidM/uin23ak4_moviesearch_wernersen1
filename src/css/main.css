@@ -20648,15 +20648,28 @@ progress {
   margin: 0.5rem 1rem;
   padding-top: 1rem;
   width: 300px;
+  max-width: 300px;
+  min-height: 300px;
 }
 
 .text-box {
   margin: 0 2.2rem;
+  padding: 0.5rem;
+  width: 300px;
   border: 2px solid #adb5bd;
 }
 
 .btn {
   margin-bottom: 1rem;
+}
+
+.imageSy {
+  margin-left: 40px;
+}
+
+img {
+  margin-left: 2.2rem;
+  width: 300px;
 }
 
 /*# sourceMappingURL=main.css.map */
