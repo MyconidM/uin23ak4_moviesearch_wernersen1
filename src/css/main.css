@@ -20635,6 +20635,7 @@ progress {
 .head-style {
   background-color: #a3cfbb;
   padding-top: 0.5rem;
+  max-width: 1350px;
   margin: 0 -0.8rem;
 }
 
@@ -20644,7 +20645,18 @@ progress {
 }
 
 .moviecard {
-  max-width: 300px;
+  margin: 0.5rem 1rem;
+  padding-top: 1rem;
+  width: 300px;
+}
+
+.text-box {
+  margin: 0 2.2rem;
+  border: 2px solid #adb5bd;
+}
+
+.btn {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

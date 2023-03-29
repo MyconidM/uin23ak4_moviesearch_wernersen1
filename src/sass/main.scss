@@ -37,6 +37,7 @@
 .head-style {
     background-color: $success-border-subtle;
     padding-top: 0.5rem;
+    max-width: 1350px;
     margin: 0 -0.8rem;
 }
 .app{
@@ -45,5 +46,22 @@
 }
 
 .moviecard {
-    max-width: 300px;
+    margin: 0.5rem 1rem;
+    padding-top: 1rem;
+    width: 300px;
+    //border: 2px $border-style $gray-500;
+    //background-color: $success-bg-subtle;
+    //border-radius: $border-radius-lg;
+}
+
+.text-box {
+    margin: 0 2.2rem;
+    //padding-top: 1rem;
+    //width: 300px;
+    border: 2px $border-style $gray-500;
+    //background-color: $success-bg-subtle;
+}
+
+.btn {
+    margin-bottom: 1rem;
 }

@@ -4,34 +4,49 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Heading from "./Heading"
 import Search from "./Search"
 import '../css/main.css';
+//import { data } from "autoprefixer"
 
 //https://www.youtube.com/watch?v=jc9_Bqzy2YQ
-export default function Main() {
+export default function Main({child}) {
 
     const [movies, setMovies] = useState([])
-    const [search, setSearch] = useState('James Bond')
+    const [movieInfo, setMoviesInfo] = useState([])
+    const [search, setSearch] = useState('james+bond')
+    
 
-    const getMovie = async() =>{
+    const getMovie = async () =>{
         const url = `http://www.omdbapi.com/?s=${search}&type=movie&apikey=3a5e4b26`;
-        const response = await fetch(url);
-        const data = await response.json();
-        setMovies(data.articles)
-        //setResultat(movies?.filter(items => items?.source?.Title === filter))
 
-        console.log(data)
-        if (data.Search) {
-        setMovies(data.Search)
-        } 
+        const response = await fetch(url).then(response => response.json());
+        setMovies(response.Search)
+
+        return response
     }
 
+    const getMovieInfo = async () => {
+        const { Search: search} = await getMovie();
+        const InfoPromise = search.map(async item => {
+            const url = `http://www.omdbapi.com/?i=${item.imdbID}&type=movie&apikey=3a5e4b26`
+            const response = await fetch(url);
+                return await response?.json(); 
+            
+        });
+       
+        const movieInfo = await Promise?.all(InfoPromise);
+            setMoviesInfo(movieInfo);
+    }
+        
+
     useEffect(() => {
-        if (search.length >= 3) {
-          getMovie(search);
+           if (search.length >= 3) {
+          getMovieInfo();
         }
+        console.log(movieInfo)
       }, [search]);
 
       //https://getbootstrap.com/docs/5.0/layout/grid/
       //https://getbootstrap.com/docs/4.0/utilities/spacing/
+      //https://stackoverflow.com/questions/49989984/loop-fetch-in-reactjs
     return (
        <>
             <header className="head-style text-align-center">
@@ -43,7 +58,7 @@ export default function Main() {
             <main>
                 <article className='container text-center'>
                     <div className='row'>
-                        <MovieCard movies={movies} />
+                        <MovieCard movies={movieInfo}/>
                     </div>
                 </article>
             </main>

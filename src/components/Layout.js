@@ -1,27 +1,15 @@
+import { Outlet } from "react-router-dom";
+import Main from "./Main";
 
-export default function Layout({
-        type,
-        className,
-        name,
-        placeholder,
-        onChange = () => {},
-        onBlur = () => {},
-        onFocus = () => {},
-        value,
-      }) {
-        return (
-          <>
-            <input
-              type={type}
-              className={className}
-              name={name}
-              placeholder={placeholder}
-              required
-              onChange={onChange}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              value={value}
-            />
-          </>
-        );
-        }
+export default function layout() {
+    return (
+        
+        <main>
+            <article className='container text-center'>
+                <div className='row'>
+                    <Outlet/>
+                </div>
+            </article>
+        </main>
+    )
+}

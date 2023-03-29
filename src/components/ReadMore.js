@@ -1,10 +1,11 @@
-export default function MovieCard(props) {
-    //https://medium.com/free-code-camp/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7
+import { useParams } from "react-router-dom";
+
+export default function ReadMore({props}) {
     const PlaceholderImg = 'https://via.placeholder.com/300x450?text=No+Poster+Available';
     return (
         <>
-            {props.movies?.map((movie, index) => 
-                <div className="col moviecard align-text-center">
+            {props.movies?.map((movie,) => 
+                <div className="align-text-center">
                     <img className="rounded-top" src={movie.Poster === 'N/A' ? PlaceholderImg : movie.Poster} alt={movie.type}></img>
                     <div className="text-box rounded-bottom">
                         <h2>{movie?.Title}</h2>
@@ -13,7 +14,7 @@ export default function MovieCard(props) {
                         <p>{movie.Director === 'N/A' ? null : movie.Director}</p>
                         <p>{movie.Actors === 'N/A' ? null : movie.Actors}</p>
                         <p>{movie.Awards === 'N/A' ? null : "Awards: "+movie.Awards}</p>
-                        <span className="btn"><button className="rounded">Les meres</button></span>
+                        <p>{movie.Plot === 'N/A' ? null : movie.Plot}</p>
                     </div>
                 </div>    
             )}
