@@ -9,7 +9,7 @@ export default function MovieCard(props) {
                     <div>
                         <h2>{movie.Title}</h2>
                         <h5>{movie.Year}</h5>
-                        <p></p>
+                        <p>{movie.imdbID.Plot}</p>
                     </div>
                 </div>    
             )}

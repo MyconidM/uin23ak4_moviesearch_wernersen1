@@ -5,9 +5,6 @@ import Heading from "./Heading"
 import Search from "./Search"
 import '../css/main.css';
 
-const api = 'http://www.omdbapi.com/?'
-const apikey = 'apikey=3a5e4b26'
-
 //https://www.youtube.com/watch?v=jc9_Bqzy2YQ
 export default function Main() {
 
@@ -47,7 +44,6 @@ export default function Main() {
                 <article className='container text-center'>
                     <div className='row'>
                         <MovieCard movies={movies} />
-                        //{Search.Response = false ? <p>Filmen finnes ikke</p> : null}
                     </div>
                 </article>
             </main>

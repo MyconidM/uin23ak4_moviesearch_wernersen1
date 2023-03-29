@@ -20643,4 +20643,8 @@ progress {
   background-color: #dee2e6;
 }
 
+.moviecard {
+  max-width: 300px;
+}
+
 /*# sourceMappingURL=main.css.map */
