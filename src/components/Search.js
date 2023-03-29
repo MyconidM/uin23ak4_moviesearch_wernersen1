@@ -1,12 +1,13 @@
 export default function Search(item) {
+    
     return (
-            <form className="col col-sm-4">
-                <input className="form-control"
+            <div className="col col-sm-4 serch">
+                <input className="form-control mt-2"
                     type="search"
                     value={item.value}
                     onChange={(event) => item.setSearch(event.target.value)}
                     placeholder="Søk på filmer...">
                 </input>
-            </form>
+            </div>
     )
 }

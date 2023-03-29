@@ -1,3 +1,5 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../../node_modules/bootstrap/scss/functions";
 
@@ -8,6 +10,12 @@
 @import "../../node_modules/bootstrap/scss/variables-dark";
 
 // 4. Include any default map overrides here
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
 
 // 5. Include remainder of required parts
 @import "../../node_modules/bootstrap/scss/maps";
@@ -26,6 +34,12 @@
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../../node_modules/bootstrap/scss/utilities/api";
 
-.art-container {
-    background-color: aquamarine;
+.head-style {
+    background-color: $success-border-subtle;
+    padding-top: 0.5rem;
+    margin: 0 -0.8rem;
+}
+.app{
+    margin-top: -1.5rem;
+    background-color: $gray-300;
 }
