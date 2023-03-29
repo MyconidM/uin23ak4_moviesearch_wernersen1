@@ -5,7 +5,8 @@ import Heading from "./Heading"
 import Search from "./Search"
 import '../css/main.css';
 
-import axios from "axios";
+const api = 'http://www.omdbapi.com/?'
+const apikey = 'apikey=3a5e4b26'
 
 //https://www.youtube.com/watch?v=jc9_Bqzy2YQ
 export default function Main() {
@@ -13,30 +14,24 @@ export default function Main() {
     const [movies, setMovies] = useState([])
     const [search, setSearch] = useState('James Bond')
 
-    useEffect(() => {
     const getMovie = async() =>{
-        const { data } = await axios.get(
-            `http://www.omdbapi.com/?s=${search}&apikey=${process.env.REACT_APP_API_KEY}`
-          );
-        //const response = await fetch(url);
-        //const data = await response.json();
+        const url = `http://www.omdbapi.com/?s=${search}&type=movie&apikey=3a5e4b26`;
+        const response = await fetch(url);
+        const data = await response.json();
         setMovies(data.articles)
         //setResultat(movies?.filter(items => items?.source?.Title === filter))
 
         console.log(data)
         if (data.Search) {
-            setMovies(data.Search)
+        setMovies(data.Search)
         } 
     }
 
-    /*useEffect(() => {
+    useEffect(() => {
         if (search.length >= 3) {
           getMovie(search);
         }
-      }, [search]);*/
-
-    getMovie(search);
-    }, [search]);
+      }, [search]);
 
       //https://getbootstrap.com/docs/5.0/layout/grid/
       //https://getbootstrap.com/docs/4.0/utilities/spacing/
@@ -51,8 +46,8 @@ export default function Main() {
             <main>
                 <article className='container text-center'>
                     <div className='row'>
-                        <MovieCard movies={movies} setMovies={setMovies}/>
-                        {Search.Response = false ? <p>Filmen finnes ikke</p> : null}
+                        <MovieCard movies={movies} />
+                        //{Search.Response = false ? <p>Filmen finnes ikke</p> : null}
                     </div>
                 </article>
             </main>
