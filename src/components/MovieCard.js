@@ -5,7 +5,7 @@ export default function MovieCard(props) {
         <>
             {props.movies?.map((movie, index) => 
                 <div className="col moviecard align-text-center">
-                    <img className="rounded-top" src={movie.Poster === 'N/A' ? PlaceholderImg : movie.Poster} alt={movie.type}></img>
+                    <img className="rounded-top imageSy" src={movie.Poster === 'N/A' ? PlaceholderImg : movie.Poster} alt={movie.type}></img>
                     <div className="text-box rounded-bottom">
                         <h2>{movie?.Title}</h2>
                         <h5>{movie.Year === 'N/A' ? null : movie.Year}</h5>
