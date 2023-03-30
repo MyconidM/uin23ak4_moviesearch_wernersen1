@@ -5,7 +5,7 @@ export default function MovieCard(props) {
 
     const extraContent = (movie) => {
         return (
-        <div className="extraText">
+        <div>
             <p>{movie.Writer === 'N/A' ? null : "Writers: "+movie.Writer}</p>
             <p>{movie.Runtime === 'N/A' ? null : "Runtime: "+movie.Runtime}</p>
             <p>{movie.Plot === 'N/A' ? null : "Plot: "+movie.Plot}</p>
@@ -20,7 +20,7 @@ export default function MovieCard(props) {
     };
 
     const PlaceholderImg = 'https://via.placeholder.com/300x450?text=No+Poster+Available';
-
+    //https://stackoverflow.com/questions/53073691/react-fetch-from-external-api-function-on-button-click
     return (
         <>
         {props.movies?.map((movie, index) =>
