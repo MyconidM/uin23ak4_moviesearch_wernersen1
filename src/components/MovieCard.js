@@ -20,7 +20,7 @@ export default function MovieCard(props) {
     };
 
     const PlaceholderImg = 'https://via.placeholder.com/300x450?text=No+Poster+Available';
-    //https://stackoverflow.com/questions/53073691/react-fetch-from-external-api-function-on-button-click
+    //https://www.pluralsight.com/guides/how-to-implement-a-read-more-link-in-react
     return (
         <>
         {props.movies?.map((movie, index) =>

@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Heading from "./Heading"
 import Search from "./Search"
 import '../css/main.css';
-//import { data } from "autoprefixer"
 
+//Fått en del hjelp av medstudenter og studass
 //https://www.youtube.com/watch?v=jc9_Bqzy2YQ
 export default function Main({child}) {
 
@@ -36,7 +36,7 @@ export default function Main({child}) {
             setMoviesInfo(movieInfo);
     }
         
-console.log(movieInfo)
+    console.log(movieInfo)
     useEffect(() => {
            if (search.length >= 3) {
           getMovieInfo();
