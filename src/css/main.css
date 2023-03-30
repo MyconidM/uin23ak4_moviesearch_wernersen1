@@ -20645,7 +20645,7 @@ progress {
 }
 
 .moviecard {
-  margin: 0.5rem 1rem;
+  margin: 0rem 0rem;
   padding-top: 1rem;
   width: 300px;
   max-width: 300px;
@@ -20653,7 +20653,6 @@ progress {
 }
 
 .text-box {
-  margin: 0 2.2rem;
   padding: 0.5rem;
   width: 300px;
   border: 2px solid #adb5bd;
@@ -20663,13 +20662,24 @@ progress {
   margin-bottom: 1rem;
 }
 
-.imageSy {
-  margin-left: 40px;
+img {
+  width: 300px;
 }
 
-img {
-  margin-left: 2.2rem;
-  width: 300px;
+@media (max-width: 768px) {
+  .app {
+    max-width: 100%;
+    width: 100%;
+  }
+  .moviecard {
+    margin: unset;
+  }
+  .text-box {
+    margin: unset;
+  }
+  .imageSy {
+    margin: unset;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

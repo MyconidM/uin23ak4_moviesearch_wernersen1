@@ -46,7 +46,7 @@
 }
 
 .moviecard {
-    margin: 0.5rem 1rem;
+    margin: 0rem 0rem;
     padding-top: 1rem;
     width: 300px;
     max-width: 300px;
@@ -57,7 +57,7 @@
 }
 
 .text-box {
-    margin: 0 2.2rem;
+    //margin: 0 2.2rem;
     padding: 0.5rem;
     //padding-top: 1rem;
     width: 300px;
@@ -70,9 +70,28 @@
 }
 
 .imageSy {
-    margin-left: 40px;
+    //margin-left: 35px;
 }
 img{
-    margin-left: 2.2rem;
+    //margin-left: 1.5rem;
     width: 300px;
+}
+
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+    .app {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .moviecard {
+        margin: unset;
+    }
+
+    .text-box {
+        margin: unset;
+    }
+    .imageSy {
+        margin: unset;
+    }
 }

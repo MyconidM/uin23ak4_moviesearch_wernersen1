@@ -5,7 +5,7 @@ import Main from './components/Main';
 import Layout from './components/Layout'
 import MovieCard from './components/MovieCard';
 import ReadMore from './components/ReadMore';
-import { Route, Routes } from 'react-router-dom';
+//import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 function App() {

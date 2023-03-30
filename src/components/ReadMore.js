@@ -1,9 +1,9 @@
 
-export default function ReadMore({props}) {
+export default function ReadMore({movie}) {
     const PlaceholderImg = 'https://via.placeholder.com/300x450?text=No+Poster+Available';
     return (
         <>
-            {props.movies?.map((movie,) => 
+           
                 <div className="">
                     <img className="rounded-top" src={movie.Poster === 'N/A' ? PlaceholderImg : movie.Poster} alt={movie.type}></img>
                     <div className="text-box rounded-bottom">
@@ -16,7 +16,7 @@ export default function ReadMore({props}) {
                         <p>{movie.Plot === 'N/A' ? null : movie.Plot}</p>
                     </div>
                 </div>    
-            )}
+            
         </>
     )
 }

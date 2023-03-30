@@ -36,12 +36,12 @@ export default function Main({child}) {
             setMoviesInfo(movieInfo);
     }
         
-
+console.log(movieInfo)
     useEffect(() => {
            if (search.length >= 3) {
           getMovieInfo();
         }
-        console.log(movieInfo)
+        
       }, [search]);
 
       //https://getbootstrap.com/docs/5.0/layout/grid/
